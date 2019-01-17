@@ -17,6 +17,7 @@ done
 
 if $device_is_connected ; then
 	export DISPLAY=":$3"
+	adb -s $1 shell media volume --show --stream 3 --set 0
 	xpra start --bind-tcp=0.0.0.0:$2 --html=on --start="scrcpy --serial $1 $SCROPTS" $DISPLAYOPTS --daemon=no $DISPLAY &
 	sleep $SLEEP
 fi
