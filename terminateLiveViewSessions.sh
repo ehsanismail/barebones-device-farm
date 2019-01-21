@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo pkill -9 scrcpy
+sudo kill -9 $(pgrep scrcpy)
 wait $(pgrep scrcpy)
 
 adb kill-server
