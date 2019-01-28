@@ -1,11 +1,8 @@
 #!/bin/bash
 
-sudo kill -9 $(pgrep scrcpy)
-wait $(pgrep scrcpy)
+sudo killall -w scrcpy
 
 adb kill-server
-sudo pkill -9 adb
-wait $(pgrep adb)
+sudo killall -w adb
 
-sudo pkill -9 vhclientx86_64
-wait $(pgrep vhclientx86_64)
+sudo killall -w vhclientx86_64
