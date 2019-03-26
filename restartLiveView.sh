@@ -42,6 +42,9 @@ done
 
 echo "Number of devices connected: $DEVICESCOUNT"
 
+echo "Prepare device_info.txt"
+$DIR/prepare_device_info_list.sh
 
 echo "Start Live View Sessions"
 $DIR/update_connection.sh
+
